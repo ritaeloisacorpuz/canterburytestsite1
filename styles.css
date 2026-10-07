@@ -17,7 +17,7 @@ body {
 /* HERO SECTION */
 .hero-section {
   position: relative;
-  background: url('images/sample.png') no-repeat center center/cover;
+  background: url('images/canterbury-global-academy-student.jpg') no-repeat center center/cover;
   min-height: 520px;
   display: flex;
   flex-direction: column;
