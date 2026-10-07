@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load Header
   const headerPlaceholder = document.getElementById("header-placeholder");
   if (headerPlaceholder) {
-    fetch("header.html")
+    fetch("/header.html")
       .then((response) => {
-        if (!response.ok) throw new Error("Header file not found.");
+        if (!response.ok) throw new Error("Header HTTP error: " + response.status);
         return response.text();
       })
       .then((data) => {
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load Footer
   const footerPlaceholder = document.getElementById("footer-placeholder");
   if (footerPlaceholder) {
-    fetch("footer.html")
+    fetch("/footer.html")
       .then((response) => {
-        if (!response.ok) throw new Error("Footer file not found.");
+        if (!response.ok) throw new Error("Footer HTTP error: " + response.status);
         return response.text();
       })
       .then((data) => {
