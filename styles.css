@@ -14,16 +14,16 @@ body {
 .main-content {
   width: 100%;
 }
-/* HERO SECTION */
+/* HERO SECTION - INCREASED HEIGHT & PADDING FOR GREATER SPACING AND LESS PANORAMIC ASPECT */
 .hero-section {
   position: relative;
   background: url('images/canterbury-global-academy-student.jpg') no-repeat center center/cover;
-  min-height: 520px;
+  min-height: 720px; /* Increased from 520px to show more of the image and increase vertical height */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-  padding: 40px 60px;
+  padding: 80px 60px 40px 60px; /* Adjusted top padding to lower overlay content like the original */
 }
 .hero-overlay-card {
   background-color: #ffffff;
@@ -32,7 +32,7 @@ body {
   max-width: 320px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-top: 20px;
+  margin-top: 40px; /* Adjusted top margin so background image peeks on top */
 }
 .hero-overlay-card .card-subtitle {
   font-size: 0.9rem;
@@ -67,7 +67,6 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
 /* ACADEMY BANNER */
 .academy-banner {
   background-color: #ebd77d;
@@ -100,7 +99,6 @@ body {
   color: #555555;
   margin-top: 10px;
 }
-
 /* NEWS SECTION - REVISED BLUE BACKGROUND (#343F64) */
 .news-section-wrapper {
   background-color: #343F64;
@@ -165,7 +163,6 @@ body {
   font-weight: bold;
   text-decoration: underline;
 }
-
 /* DARK CARD (Right Column) - REVISED DARK BLUE (#343F64) */
 .dark-card {
   background-color: #343F64;
@@ -237,7 +234,6 @@ body {
   height: 100px;
   object-fit: cover;
 }
-
 /* FOOTER - REVISED BEIGE BACKGROUND (#ebd77d) & BLACK TEXT */
 footer, .site-footer {
   background-color: #ebd77d !important;
@@ -250,7 +246,6 @@ footer a, .site-footer a {
 footer h3, footer h4, .site-footer h3, .site-footer h4 {
   color: #000000 !important;
 }
-
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 850px) {
   .news-container {
