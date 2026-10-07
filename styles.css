@@ -267,17 +267,12 @@ body {
   }
 }
 /* ACADEMY SUB-BANNER */
+
 .academy-banner {
-  background-color: #ebd77d;
-  /* Background Graphic Image Path */
-  background-image: url('images/home1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #ebd77d; /* Solid sub-banner color */
   text-align: center;
   padding: 25px 20px;
 }
-
 /* SUB-BANNER TEXT BUTTON ROW */
 .subbanner-nav {
   display: flex;
