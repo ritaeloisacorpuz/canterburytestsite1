@@ -266,3 +266,45 @@ body {
     width: 100%;
   }
 }
+/* ACADEMY SUB-BANNER */
+.academy-banner {
+  background-color: #ebd77d;
+  /* Background Graphic Image Path */
+  background-image: url('images/subbanner-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+/* SUB-BANNER TEXT BUTTON ROW */
+.subbanner-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+.subbanner-btn {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.subbanner-btn:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.academy-banner p {
+  font-size: 0.75rem;
+  color: #555555;
+  margin-top: 10px;
+}
