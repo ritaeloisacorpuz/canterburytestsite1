@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Tutorial - Power Tutorial</title>
+    
+    <!-- Rule 5: Link External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Rule 6: Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+
+        <!-- ==========================================
+             BOOKING FORM SECTION
+        =========================================== -->
+        <section class="section-home2">
+            <div class="container max-w-700">
+                
+                <!-- Section Header -->
+                <div class="text-center" style="margin-bottom: 30px;">
+                    <h1 class="page-title text-teal" style="font-style: italic; font-size: 2.5rem;">Schedule a Tutorial</h1>
+                    <div class="short-accent-line"></div>
+                    <p style="font-size: 0.95rem; color: #555; line-height: 1.6; margin-top: 15px;">
+                        Please indicate below the topic you need, the name of the tutor you prefer and indicate five (5) preferred schedules, with the one on top your most preferred schedule. We will contact you to confirm which one of your five preferred schedules match the tutor's availability, then confirm the appointment through Viber and e-mail.
+                    </p>
+                </div>
+
+                <!-- Booking Form sending to Cloudflare / Ateneo Email -->
+                <form action="https://formspree.io/f/rita.eloisa.corpuz@student.ateneo.edu" method="POST" class="booking-form-wrapper">
+                    
+                    <!-- Email Subject Redirect for Cloudflare Rerouting -->
+                    <input type="hidden" name="_subject" value="New Power Tutorial Booking Request">
+
+                    <!-- Field 1: Name -->
+                    <div class="form-group">
+                        <label for="fullName">NAME: First, Last *</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required>
+                    </div>
+
+                    <!-- Field 2: Email -->
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <!-- Field 3: Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="+63" required>
+                    </div>
+
+                    <!-- Field 4: Topic -->
+                    <div class="form-group">
+                        <label for="topic">Topic for Tutoring (please be specific) *</label>
+                        <textarea id="topic" name="topic" rows="3" class="form-input" required></textarea>
+                    </div>
+
+                    <!-- Field 5: Preferred Tutors -->
+                    <div class="form-group">
+                        <label for="preferredTutors">Indicate the name of your preferred tutor. Please identify at least three tutors to allow options in case of unavailability and indicate their names in order of preference with #1 as the most preferred. *</label>
+                        <textarea id="preferredTutors" name="preferredTutors" rows="3" class="form-input" required></textarea>
+                    </div>
+
+                    <!-- Date & Time Heading -->
+                    <div style="margin-top: 40px; margin-bottom: 20px;">
+                        <label class="font-bold" style="font-size: 0.95rem; color: #333; display: block; line-height: 1.5;">
+                            DATE & TIME OF TUTORIAL: Please indicate five (5) preferred schedules, with the one on top your most preferred schedule. We will contact you to confirm which schedule matches the tutor's availability.
+                        </label>
+                    </div>
+
+                    <!-- 5 Schedule Slots -->
+                    <!-- Slot 1 -->
+                    <div class="schedule-block">
+                        <span class="schedule-label">Date and time #1</span>
+                        <div class="schedule-inputs-grid">
+                            <select name="slot1_month" class="form-input">
+                                <option value="" disabled selected>Month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                            <input type="number" name="slot1_day" placeholder="Day" min="1" max="31" class="form-input">
+                            <input type="number" name="slot1_year" placeholder="Year" value="2026" class="form-input">
+                            <input type="time" name="slot1_time" class="form-input">
+                        </div>
+                    </div>
+
+                    <!-- Slot 2 -->
+                    <div class="schedule-block">
+                        <span class="schedule-label">Date and time #2</span>
+                        <div class="schedule-inputs-grid">
+                            <select name="slot2_month" class="form-input">
+                                <option value="" disabled selected>Month</option>
+                                <option value="January">January</option><option value="February">February</option>
+                                <option value="March">March</option><option value="April">April</option>
+                                <option value="May">May</option><option value="June">June</option>
+                                <option value="July">July</option><option value="August">August</option>
+                                <option value="September">September</option><option value="October">October</option>
+                                <option value="November">November</option><option value="December">December</option>
+                            </select>
+                            <input type="number" name="slot2_day" placeholder="Day" min="1" max="31" class="form-input">
+                            <input type="number" name="slot2_year" placeholder="Year" value="2026" class="form-input">
+                            <input type="time" name="slot2_time" class="form-input">
+                        </div>
+                    </div>
+
+                    <!-- Slot 3 -->
+                    <div class="schedule-block">
+                        <span class="schedule-label">Date and time #3</span>
+                        <div class="schedule-inputs-grid">
+                            <select name="slot3_month" class="form-input">
+                                <option value="" disabled selected>Month</option>
+                                <option value="January">January</option><option value="February">February</option>
+                                <option value="March">March</option><option value="April">April</option>
+                                <option value="May">May</option><option value="June">June</option>
+                                <option value="July">July</option><option value="August">August</option>
+                                <option value="September">September</option><option value="October">October</option>
+                                <option value="November">November</option><option value="December">December</option>
+                            </select>
+                            <input type="number" name="slot3_day" placeholder="Day" min="1" max="31" class="form-input">
+                            <input type="number" name="slot3_year" placeholder="Year" value="2026" class="form-input">
+                            <input type="time" name="slot3_time" class="form-input">
+                        </div>
+                    </div>
+
+                    <!-- Slot 4 -->
+                    <div class="schedule-block">
+                        <span class="schedule-label">Date and time #4</span>
+                        <div class="schedule-inputs-grid">
+                            <select name="slot4_month" class="form-input">
+                                <option value="" disabled selected>Month</option>
+                                <option value="January">January</option><option value="February">February</option>
+                                <option value="March">March</option><option value="April">April</option>
+                                <option value="May">May</option><option value="June">June</option>
+                                <option value="July">July</option><option value="August">August</option>
+                                <option value="September">September</option><option value="October">October</option>
+                                <option value="November">November</option><option value="December">December</option>
+                            </select>
+                            <input type="number" name="slot4_day" placeholder="Day" min="1" max="31" class="form-input">
+                            <input type="number" name="slot4_year" placeholder="Year" value="2026" class="form-input">
+                            <input type="time" name="slot4_time" class="form-input">
+                        </div>
+                    </div>
+
+                    <!-- Slot 5 -->
+                    <div class="schedule-block">
+                        <span class="schedule-label">Date and time #5</span>
+                        <div class="schedule-inputs-grid">
+                            <select name="slot5_month" class="form-input">
+                                <option value="" disabled selected>Month</option>
+                                <option value="January">January</option><option value="February">February</option>
+                                <option value="March">March</option><option value="April">April</option>
+                                <option value="May">May</option><option value="June">June</option>
+                                <option value="July">July</option><option value="August">August</option>
+                                <option value="September">September</option><option value="October">October</option>
+                                <option value="November">November</option><option value="December">December</option>
+                            </select>
+                            <input type="number" name="slot5_day" placeholder="Day" min="1" max="31" class="form-input">
+                            <input type="number" name="slot5_year" placeholder="Year" value="2026" class="form-input">
+                            <input type="time" name="slot5_time" class="form-input">
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.88rem; color: #666; margin-top: 15px; margin-bottom: 35px;">
+                        The preferred number of hours is two (2) hours to allow for breaks and warm ups. Less than this can be allowed in some circumstances.
+                    </p>
+
+                    <!-- Terms & Payment Guidelines Text Block -->
+                    <div class="payment-terms-box">
+                        <p><strong>25% BOOKING FEE DEPOSIT FOR HAWTHORNE CONSULTANCY:</strong> Twenty-five percent (25%) of the tutorial services fee has to be deposited directly to Power Tutorial's Landbank bank account #3731027071 after confirmation of the booking schedule.</p>
+                        <br>
+                        <p><strong>TUTOR'S ADVANCE 10% PAYMENT:</strong> 10% of the tutorial fee will be advanced directly to the tutor's bank account or GCASH before the tutorial session shortly upon booking confirmation. If the booking student cancels, this 10% will be forfeited in favor of the tutor. This financial transaction will no longer pass through the bank account of Power Tutorial.</p>
+                        <br>
+                        <p><strong>TUTOR PAYMENT OF THE 65% BALANCE PAYMENT:</strong> The booking student will pay the remaining 65% balance payment directly to the tutor's bank account or GCASH account after the tutorial session. Likewise, this financial transaction will no longer pass through the bank account of Power Tutorial.</p>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center" style="margin-top: 30px;">
+                        <button type="submit" class="btn-green-solid" style="width: 100%; max-width: 400px; padding: 14px; font-size: 1.05rem; cursor: pointer; border: none;">Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Bottom Contact Card Section -->
+        <section class="section-about3" style="background-image: url('images/bg-flatlay-desk.jpg');">
+            <div class="container flex-center">
+                <div class="contact-card-white">
+                    <div class="contact-col">
+                        <span class="contact-label">Call</span>
+                        <span class="contact-value font-bold">0956-400-1626</span>
+                    </div>
+                    <div class="contact-col">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:powertutorial@hawthorneconsultancymanila.com" class="contact-value font-bold text-teal">powertutorial@hawthorneconsultancymanila.com</a>
+                    </div>
+                    <div class="contact-col">
+                        <span class="contact-label">Follow</span>
+                        <a href="#" class="contact-value font-bold text-teal">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rule 7: Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Rule 8: Loader Script -->
+    <script src="include.js"></script>
+</body>
+</html>
