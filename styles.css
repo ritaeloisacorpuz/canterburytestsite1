@@ -678,3 +678,91 @@ select.form-input {
         grid-template-columns: 1fr 1fr;
     }
 }
+/* ==========================================
+   COLOR OVERRIDES & ACCENT UPDATES
+   ========================================== */
+
+/* ------------------------------------------
+   (2) CHANGE BLACK BLOCKS, BUTTONS, TEXTS & 
+   SUBBANNERS TO DARK BLUE (#343f64)
+   ------------------------------------------ */
+
+/* Buttons & Form Actions */
+button,
+input[type="submit"],
+.btn,
+.btn-primary,
+.btn-black,
+.btn-dark,
++ Upload It,
+.button {
+    background-color: #343f64 !important;
+    color: #FFFFFF !important;
+    border-color: #343f64 !important;
+}
+
+/* Upload & Form Action Buttons Specific Target */
+input[type="file"]::file-selector-button,
+button[type="submit"] {
+    background-color: #343f64 !important;
+    color: #ffffff !important;
+}
+
+/* Form Titles, Headings, Subheadings & Primary Text */
+h1, h2, h3, h4, h5, h6,
+.order-form-title,
+.section-title,
+.subbanner-title {
+    color: #343f64 !important;
+}
+
+/* Dark Subbanner Blocks (3rd Screenshot) */
+.dark-section,
+.subbanner,
+.bg-black,
+.bg-dark,
+section[style*="background-color: black"],
+section[style*="background-color: #000"],
+section[style*="background: black"] {
+    background-color: #343f64 !important;
+    color: #FFFFFF !important;
+}
+
+/* Ensure text inside dark subbanners stays white */
+.dark-section *,
+.subbanner *,
+.bg-black *,
+.bg-dark * {
+    color: #FFFFFF !important;
+}
+
+/* ------------------------------------------
+   (3) FAQ SECTION: DARK BLUE (#343f54) BACKGROUND 
+   WITH WHITE TEXT
+   ------------------------------------------ */
+
+/* Target light blue FAQ containers/backgrounds */
+.faq-container,
+.faq-section,
+.section-faq,
+div[class*="faq"],
+section[class*="faq"] {
+    background-color: #343f54 !important;
+    color: #FFFFFF !important;
+}
+
+/* FAQ Titles, Questions, and Answers to White */
+.faq-container *,
+.faq-section *,
+.section-faq *,
+div[class*="faq"] *,
+section[class*="faq"] * {
+    color: #FFFFFF !important;
+}
+
+/* Borders/Dividers inside FAQ Section */
+.faq-container border,
+.faq-section hr,
+.faq-section .border-bottom {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
