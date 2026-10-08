@@ -776,3 +776,29 @@ div[class*="faq"] hr,
 section[class*="faq"] hr {
     border-color: rgba(255, 255, 255, 0.25) !important;
 }
+/* Targets submit buttons and custom upload buttons */
+button, 
+input[type="submit"], 
+.button-class-name { 
+    background-color: #343f64 !important;
+    color: #ffffff !important; /* Text inside the button */
+    border-color: #343f64 !important;
+}
+
+/* Ensure hover state stays dark blue or slight variant */
+button:hover, 
+input[type="submit"]:hover {
+    background-color: #283150 !important;
+}
+/* Text typed into fields */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    color: #343f64 !important;
+}
+
+/* Placeholder text ("example@domain.com") */
+::placeholder {
+    color: #343f64 !important;
+    opacity: 0.7; /* Optional opacity adjustment */
+}
