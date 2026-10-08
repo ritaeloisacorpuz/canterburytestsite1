@@ -683,32 +683,25 @@ select.form-input {
    ========================================== */
 
 /* ------------------------------------------
-   (2) CHANGE BLACK BLOCKS, BUTTONS, TEXTS & 
-   SUBBANNERS TO DARK BLUE (#343f64)
+   (1) BUTTONS, BLOCKS, AND SUBBANNERS (#343f64)
    ------------------------------------------ */
 
-/* Buttons & Form Actions */
+/* Target all buttons and form submissions */
 button,
 input[type="submit"],
+input[type="button"],
 .btn,
 .btn-primary,
 .btn-black,
 .btn-dark,
-+ Upload It,
-.button {
+.button,
+a.button {
     background-color: #343f64 !important;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     border-color: #343f64 !important;
 }
 
-/* Upload & Form Action Buttons Specific Target */
-input[type="file"]::file-selector-button,
-button[type="submit"] {
-    background-color: #343f64 !important;
-    color: #ffffff !important;
-}
-
-/* Form Titles, Headings, Subheadings & Primary Text */
+/* Form Titles & Headings */
 h1, h2, h3, h4, h5, h6,
 .order-form-title,
 .section-title,
@@ -716,53 +709,70 @@ h1, h2, h3, h4, h5, h6,
     color: #343f64 !important;
 }
 
-/* Dark Subbanner Blocks (3rd Screenshot) */
+/* Dark Subbanners & Inline Black Background Overrides */
 .dark-section,
 .subbanner,
 .bg-black,
 .bg-dark,
 section[style*="background-color: black"],
 section[style*="background-color: #000"],
-section[style*="background: black"] {
+section[style*="background: black"],
+div[style*="background-color: black"],
+div[style*="background-color: #000"],
+div[style*="background: black"] {
     background-color: #343f64 !important;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 
-/* Ensure text inside dark subbanners stays white */
+/* White Text inside Dark Subbanners */
 .dark-section *,
 .subbanner *,
 .bg-black *,
-.bg-dark * {
-    color: #FFFFFF !important;
+.bg-dark *,
+section[style*="background-color: black"] *,
+section[style*="background-color: #000"] * {
+    color: #ffffff !important;
 }
 
 /* ------------------------------------------
-   (3) FAQ SECTION: DARK BLUE (#343f54) BACKGROUND 
-   WITH WHITE TEXT
+   (2) FAQ & PAGE CONTAINER COLOR OVERRIDES (#343f64)
    ------------------------------------------ */
 
-/* Target light blue FAQ containers/backgrounds */
+/* Target light blue/pale backgrounds on main, section, and div wrappers */
+main[style*="background"],
+section[style*="background"],
+div[style*="background-color: #e8f4f8"],
+div[style*="background-color: #e6f3f8"],
+div[style*="background-color: #eaf4f8"],
 .faq-container,
 .faq-section,
 .section-faq,
 div[class*="faq"],
 section[class*="faq"] {
-    background-color: #343f54 !important;
-    color: #FFFFFF !important;
+    background-color: #343f64 !important;
+    color: #ffffff !important;
 }
 
-/* FAQ Titles, Questions, and Answers to White */
+/* Force FAQ text, headers, and links to render as White */
 .faq-container *,
 .faq-section *,
 .section-faq *,
 div[class*="faq"] *,
-section[class*="faq"] * {
-    color: #FFFFFF !important;
+section[class*="faq"] *,
+main[style*="background"] p,
+main[style*="background"] h1,
+main[style*="background"] h2,
+main[style*="background"] h3,
+main[style*="background"] span,
+main[style*="background"] a {
+    color: #ffffff !important;
 }
 
-/* Borders/Dividers inside FAQ Section */
+/* Border/Divider lines inside FAQ section */
 .faq-container border,
 .faq-section hr,
-.faq-section .border-bottom {
-    border-color: rgba(255, 255, 255, 0.2) !important;
+.faq-section .border-bottom,
+div[class*="faq"] hr,
+section[class*="faq"] hr {
+    border-color: rgba(255, 255, 255, 0.25) !important;
 }
