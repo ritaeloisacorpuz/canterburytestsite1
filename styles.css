@@ -802,3 +802,7 @@ textarea {
     color: #343f64 !important;
     opacity: 0.7; /* Optional opacity adjustment */
 }
+/* Sets base body/form text color */
+body, form, label, .form-group {
+    color: #343f64 !important;
+}
