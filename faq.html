@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs - Maid on Demand (MOD)</title>
+  <!-- Link external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Dedicated FAQs Layout Styling matching design specs */
+    .faq-page-wrapper {
+      background-color: #ebf7fa; /* Soft ice-blue background from screenshots */
+      padding: 60px 8% 80px 8%;
+      color: var(--primary-navy, #1f364d);
+    }
+
+    .faq-page-title {
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--primary-navy, #1f364d);
+      margin-bottom: 50px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 0;
+      border-bottom: 1px solid rgba(31, 54, 77, 0.2);
+      gap: 40px;
+    }
+
+    .faq-question {
+      flex: 1;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--primary-navy, #1f364d);
+      line-height: 1.4;
+    }
+
+    .faq-answer {
+      flex: 1.2;
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    .faq-answer p {
+      margin-bottom: 15px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Direct Contact Bar (Bottom of FAQs) */
+    .faq-contact-bar {
+      background-color: #d9eff5;
+      padding: 35px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .faq-contact-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-contact-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--primary-navy, #1f364d);
+      margin-bottom: 5px;
+    }
+
+    .faq-contact-value {
+      font-size: 0.9rem;
+      color: var(--primary-navy, #1f364d);
+      text-decoration: underline;
+    }
+
+    .faq-brand-logo img {
+      max-height: 75px;
+      width: auto;
+      display: block;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .faq-page-wrapper {
+        padding: 40px 5% 50px 5%;
+      }
+      .faq-page-title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .faq-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 0;
+      }
+      .faq-question, .faq-answer {
+        flex: none;
+        width: 100%;
+      }
+      .faq-contact-bar {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        padding: 30px 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header Placeholder -->
+  <div id="header-placeholder"></div>
+
+  <!-- Main FAQ Content -->
+  <main class="faq-page-wrapper">
+    <h1 class="faq-page-title">FAQs</h1>
+
+    <div class="faq-list">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          How does the MOD cleaning service work?
+        </div>
+        <div class="faq-answer">
+          <p>MOD cleaning services provide fractional employment of Cleaners to households only at a time and date the homeowner needs the cleaning service. It allows clients to have clean homes without the need to employ a full-time, stay-in maid. This is more cost-efficient in the long run, apart from being safer because the client-cleaner relationship is maintained at a professional distance and the cleaning lady has no free access to the home when the homeowner is not at home.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          How are the fees computed?
+        </div>
+        <div class="faq-answer">
+          <p>For a studio unit MOD charges begin at Php 800 per cleaning for the smallest unit, which is 15 square meters. There is an additional 40 pesos per square meter. So, if it is 28 square meters, that's 800 pesos basic charge + 520 pesos for the additional 13 square meters which amounts to 1,320 cleaning fee.</p>
+          <p>Fees for the Party Staff and Kitchen Staff are variable, depending on client specifications.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          Will MOD cleaners be bringing their own cleaning equipment?
+        </div>
+        <div class="faq-answer">
+          <p>At present, MOD only provides manpower for the cleaning service because most clients prefer to use their own cleaning implements for hygienic reasons. However, in the next phase launch our accredited cleaning ladies will provide an option to bring in cleaning equipments at a minimal additional cost.</p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          How is Exemplary Cleaning Service associated with MOD?
+        </div>
+        <div class="faq-answer">
+          <p>Exemplary Cleaning Services is the official business name of the cleaning service that recruit, train and deploy maids on call. MOD is a brand name developed by a marketing consultancy firm for the owner/s of Exemplary Cleaning Services. The MOD brand was developed for marketing purposes to create a brand of high-quality, convenient and trustworthy cleaning service that capitalizes on word play of the MOD acronym to symbolize modernity and thus enhance recall.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Direct Contact Info Bar -->
+  <section class="faq-contact-bar">
+    <div class="faq-contact-item">
+      <span class="faq-contact-label">Email</span>
+      <a href="mailto:maid-on-demand@hawthorneconsultancymanila.com" class="faq-contact-value">
+        maid-on-demand@hawthorneconsultancymanila.com
+      </a>
+    </div>
+
+    <div class="faq-contact-item">
+      <span class="faq-contact-label">Call</span>
+      <a href="tel:09564001626" class="faq-contact-value">
+        0956-400-1626
+      </a>
+    </div>
+
+    <div class="faq-brand-logo">
+      <img src="images/mod-vertical-logo.png" alt="MOD Maid-on-Demand Logo">
+    </div>
+  </section>
+
+  <!-- 2. Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 3. Include Script -->
+  <script src="include.js"></script>
+
+</body>
+</html>
